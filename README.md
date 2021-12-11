@@ -3,6 +3,7 @@
 | Course Code | Course Name |
 | --- | --- |
 | CSCI1540 | Fundamental Computing with C++ |
+| CSCI2510 | Computer Organization |
 | CSCI2520 | Data Structures and Applications |
 | CSCI3100 | Software Engineering |
 | CSCI3260 | Principles of Computer Graphics |
