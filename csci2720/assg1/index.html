@@ -1,0 +1,235 @@
+<!--
+  CSCI2720 Assignment 1
+  Ng Wing Yin 1155127101
+-->
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <!-- Meta tags -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <!-- FontAwesome icons -->
+  <script src="https://kit.fontawesome.com/40e80b98bf.js" crossorigin="anonymous"></script>
+
+  <!-- Local files -->
+  <link rel="stylesheet" href="style.css" />
+  <script type="text/javascript" src="main.js" defer></script>
+  <title>Nicholas Ng</title>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="d-flex justify-content-between align-items-center bg-dark">
+      <a href="#home" class="nav-logo">Nicholas</a>
+      <nav>
+        <ul class="d-none d-sm-flex container row nav-list">
+          <li class="col-sm nav-item"><a class="nav-link" href="#home">
+            <i class="d-none d-md-block d-lg-none fas fa-home"></i>
+            <span class="d-none d-lg-block">Home</span>
+          </a></li>
+          <li class="col-sm nav-item"><a class="nav-link" href="#about">
+            <i class="d-none d-md-block d-lg-none fas fa-user"></i>
+            <span class="d-none d-lg-block">About</span>
+          </a></li>
+          <li class="col-sm nav-item"><a class="nav-link" href="#hobbies">
+            <i class="d-none d-md-block d-lg-none fas fa-running"></i>
+            <span class="d-none d-lg-block">Hobbies</span>
+          </a></li>
+          <li class="col-sm nav-item"><a class="nav-link" href="#contact">
+            <i class="d-none d-md-block d-lg-none fas fa-phone"></i>
+            <span class="d-none d-lg-block">Contact</span>
+          </a></li>
+        </ul>
+      </nav>
+      <button class="px-3 nav-special">Special</button>
+    </div>
+  </header>
+
+  <!-- Hidden header -->
+  <div class="hidden-header">
+    <div class="d-flex justify-content-center align-items-center">
+      <button class="d-flex justify-content-center px-3 mx-4 hidden-button" id="task-1"><span class="d-none d-lg-block px-1">Task 1:</span>Align</button>
+      <button class="d-flex justify-content-center px-3 mx-4 hidden-button" id="task-2"><span class="d-none d-lg-block px-1">Task 2:</span>New Hobby</button>
+      <button class="d-flex justify-content-center px-3 mx-4 hidden-button" id="task-3"><span class="d-none d-lg-block px-1">Task 3:</span>Scroll</button>
+    </div>
+    <div class="mx-4 sticky-top progress">
+      <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0"
+        aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+    </div>
+  </div>  
+
+  <!-- Main -->
+  <main>
+    <!-- Home section -->
+    <section class="home section">
+      <a class="anchor" id="home"></a>
+      <div class="container home-container grid">
+          <div class="home-wrapper">
+            <div class="home-text">
+              <h2 class="home-subtitle">Hello, I am</h2>
+              <h1 class="home-title">Nicholas Ng</h1>
+              <p class="home-description">I major in Mathematics, and at the same time minor in Computer Science and Spanish. I am
+                currently studying <b>CSCI2720: Building Web Applications</b> and web applications are really amazing.</p>
+            
+              <div class="d-flex align-items-center home-icons">
+                <i class="fas fa-arrow-alt-circle-down"></i>
+                <p class="ms-2 home-scroll">Scroll down to see more</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="home-media grid">
+            <canvas class="home-canvas"></canvas>
+            <img class="home-profile-image" src="profile.png" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About section -->
+    <section class="about section">
+      <a class="anchor" id="about"></a>
+      <h1 class="section-heading">About</h1>
+      <div class="container about-container grid">
+
+        <div class="d-flex-column about-card align-items-center">
+          <h3 class="about-quote">"If debugging is the process of removing software bugs, then programming must be the process of
+              putting them in."</h3>
+          <h3 class="about-author">- Edsger Dijkstra</h3>
+        </div>
+        
+        <div class="about-courses">
+          <h2 class="about-subheading">CSCI Courses</h2>
+          <table class="about-table">
+            <thead>
+              <tr>
+                <th>Code</th>
+                <th>Name</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>CSCI1540</td>
+                <td>Fundamental Computing with C++</td>
+              </tr>
+              <tr>
+                <td>CSCI2510</td>
+                <td>Computer Organization</td>
+              </tr>
+              <tr>
+                <td>CSCI2520</td>
+                <td>Data Structures and Applications</td>
+              </tr>
+              <tr>
+                <td>CSCI2720</td>
+                <td>Building Web Applications</td>
+              </tr>
+              <tr>
+                <td>CSCI3100</td>
+                <td>Software Engineering</td>
+              </tr>
+              <tr>
+                <td>CSCI3260</td>
+                <td>Principles of Computer Graphics</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="mt-4 p-2 border border-warning rounded about-remarks">Did you know in mobile view (below 600px), this text is in green instead of yellow, colors of the quote above will be swapped, and my name at the very beginning will be in uppercase? And of course, for other device sizes, I also added some changes to make the website natural in style for all kinds of devices.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hobbies section -->
+    <section class="hobbies section">
+      <a class="anchor" id="hobbies"></a>
+      <h1 class="section-heading">Hobbies</h1>
+      <div class="container hobbies-container">
+        <h2 class="mb-4 hobbies-description">I like to do a lot of things, such as...</h2>
+        <div class="m-2 hobbies-group" id="hobby-list">
+          <div class="hobbies-item">Reading novels</div>
+          <div class="hobbies-item">Painting</div>
+          <div class="hobbies-item">Sketching</div>
+          <div class="hobbies-item">Singing</div>
+          <div class="hobbies-item">Playing table tennis</div>
+          <div class="hobbies-item">Playing badminton</div>
+          <div class="hobbies-item">Mathematics</div>
+          <div class="hobbies-item">Spanish</div>
+          <div class="hobbies-item">Programming</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact section -->
+    <section class="contact section">
+      <a class="anchor" id="contact"></a>
+      <h1 class="section-heading">Contact</h1>
+      <div class="container contact-container">
+        <div class="container">
+          <div id="comments">
+            <div id="c1001" class="d-flex">
+              <div class="flex-shrink-0">
+                <svg height="100" width="100">
+                  <circle cx="50" cy="50" r="40" fill="green">
+                  </circle>
+                </svg>
+              </div>
+              <div class="flex-grow-1">
+                <h5>chuckjee@cse.cuhk.edu.hk</h5>
+                <p>This lab is so fun! Let's explore further with Bootstrap and JS fetch.</p>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <h6>Add your comment:</h6>
+          <form>
+            <div class="mb-3">
+              <label for="new-email" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="new-email" placeholder="name@example.com" required>
+            </div>
+            <div class="mb-3">
+              <label for="new-comment" class="form-label">Comment</label>
+              <textarea class="form-control" id="new-comment" rows="3" required></textarea>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="new-color" id="new-color-red" value="red">
+              <label class="form-check-label" for="new-color-red">Red</label>
+              <br>
+              <input class="form-check-input" type="radio" name="new-color" id="new-color-green" value="green">
+              <label class="form-check-label" for="new-color-green">Green</label>
+              <br>
+              <input class="form-check-input" type="radio" name="new-color" id="new-color-yellow" value="yellow">
+              <label class="form-check-label" for="new-color-yellow">Yellow</label>
+              <br>
+              <input class="form-check-input" type="radio" name="new-color" id="new-color-blue" value="blue">
+              <label class="form-check-label" for="new-color-blue">Blue</label>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="processform()">Add comment</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p class="footer-name">Ng Wing Yin (1155127101) CSCI2720 Assignment 1</p>
+    <a class="footer-link" href='https://pngtree.com/free-backgrounds'>free background photos from pngtree.com</a>
+  </footer>
+</body>
+</html>

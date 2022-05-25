@@ -1,0 +1,325 @@
+/*
+  CSCI2720 Assignment 1
+  Ng Wing Yin 1155127101
+*/
+
+/* media: 600, 1350 */
+
+:root {
+  --color-black: #111111;
+  --color-white: #f8f8f8;
+  --color-tint: #35a7a7;
+  --color-tint-darken: #294b54;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.5s;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  border-radius: 1rem;
+  background: var(--color-tint);
+  color: var(--color-white);
+}
+
+h1 {
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+h2, h3, h4 {
+  color: var(--color-white);
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 5rem;
+  padding: 1rem 15%;
+  background-image: url('—Pngtree—city buildings night black background_210690.png');
+  background-position: center center;
+  z-index: 2000;
+}
+
+.nav-logo {
+  margin: 0 auto 0 0;
+  padding: 0 2rem;
+  cursor: pointer;
+  color: var(--color-white);
+}
+
+.nav-logo:hover {
+  color: var(--color-tint);
+}
+
+.nav-list {
+  margin: 0;
+}
+
+.nav-item {
+  display: inline-block;
+  height: 100%;
+  padding: 0 0.125rem;
+}
+
+.nav-link, .nav-link:visited {
+  position: relative;
+  color: var(--color-white);
+}
+
+.nav-link:hover {
+  color: var(--color-tint);
+}
+
+.nav-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  background: var(--color-white);
+  transition: width 0.5s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  background: var(--color-tint);
+  transition: width 0.5s;
+}
+
+.nav-special {
+  margin: 0 2rem 0 1rem;
+}
+
+.hidden-header {
+  position: fixed;
+  top: -2rem;
+  width: 100%;
+  height: 2rem;
+  background: -webkit-linear-gradient(90deg, #0000 0%, #fff1 100%);
+  z-index: 1000;
+}
+
+.hidden-header.show {
+  top: 5rem;
+}
+
+.hidden-button {
+  width: 12rem;
+}
+
+.progress {
+  display: none;
+}
+
+.progress.show {
+  display: flex;
+}
+
+main {
+  display: block;
+  margin-top: 5rem;
+  z-index: 100;
+}
+
+.anchor {
+  display: block;
+  position: relative;
+  bottom: 7rem;
+  visibility: hidden;
+}
+
+.section {
+  display: block;
+  min-width: 516px;
+  min-height: calc(100vh - 5rem);
+  padding: 2rem 0;
+}
+
+.section-heading {
+  font-size: 6rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.about, .contact {
+  background: var(--color-tint-darken);
+}
+
+.home-wrapper {
+  position: relative;
+}
+
+.home-text {
+  margin-top: 8rem;
+}
+
+.home-title {
+  padding-bottom: 1rem;
+  font-size: 4rem;
+  text-transform: uppercase;
+  background: -webkit-linear-gradient(-45deg, var(--color-tint) 0%, #a1ce3f 100%);
+  background-clip: text;
+  box-decoration-break: clone;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-box-decoration-break: clone;
+}
+
+.home-description {
+  padding-right: 1rem;
+  font-weight: 300;
+}
+
+.home-description b {
+  font-weight: 700;
+}
+
+.home-media {
+  justify-self: center;
+  align-self: center;
+}
+
+.home-canvas, .home-profile-image {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.home-canvas {
+  z-index: 100;
+}
+
+.home-profile-image {
+  z-index: 200;
+}
+
+.about-card {
+  background: var(--color-tint);
+  margin-right: 2rem;
+  padding: 4rem;
+}
+
+.about-quote {
+  font-weight: 300;
+  color: var(--color-white);
+}
+
+.about-author {
+  width: 100%;
+  margin-top: 2rem;
+  font-weight: 300;
+  text-align: right;
+  color: var(--color-white);
+}
+
+.about-subheading {
+  font-weight: 700;
+}
+
+.about-table {
+  width: 100%;
+  border-top: 2px solid var(--color-white);
+}
+
+.about-table th {
+  padding-top: 2rem;
+}
+
+.about-table th, .about-table td {
+  padding-right: 2rem;
+}
+
+.about-remarks {
+  color: #a1ce3f;
+}
+
+.hobbies-item {
+  display: inline-block;
+  margin: 0.5rem 0.25rem;
+  padding: 0.5rem 1rem;
+  border-radius: 1.5rem;
+  font-size: 1.25rem;
+  background-color: var(--color-tint);
+  color: var(--color-white);
+}
+
+footer {
+  min-height: 4rem;
+  padding: 1rem 15%;
+}
+
+.footer-name {
+  margin: 0;
+}
+
+.footer-link {
+  color: var(--color-tint);
+}
+
+@media (min-width: 600px) {
+  .home-title {
+    text-transform: none;
+  }
+
+  .about-card {
+    background: var(--color-white);
+  }
+
+  .about-quote, .about-author {
+    color: var(--color-tint);
+  }
+
+  .about-remarks {
+    color: #ffcc00;
+  }
+}
+
+@media (min-width: 676px) {
+  .section {
+    padding: 2rem 15%;
+  }
+}
+
+@media (min-width: 1350px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .home-icons {
+    position: absolute;
+    bottom: 0;
+    height: 2rem;
+  }
+}

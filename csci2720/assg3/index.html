@@ -1,0 +1,88 @@
+<!--
+  CSCI2720 Assignment 3
+  Ng Wing Yin 1155127101
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>New Location</h1>
+  <form action="http://localhost:3000/loc" method="post">
+    <label for="locationname">Location name</label>
+    <input type="text" id="locationname" name="name">
+    <br>
+  
+    <label for="locationquota">Location quota</label>
+    <input type="text" id="locationquota" name="quota">
+    <br>
+  
+    <input type="submit">
+  </form>
+  
+  <h1>New Event</h1>
+  <form action="http://localhost:3000/event" method="post">
+    <label for="eventname">Event name</label>
+    <input type="text" id="eventname" name="name">
+    <br>
+  
+    <label for="eventloc">Event location</label>
+    <input type="text" id="eventloc" name="location">
+    <br>
+  
+    <label for="eventquota">Event quota</label>
+    <input type="text" id="eventquota" name="quota">
+    <br>
+  
+    <input type="submit">
+  </form>
+
+  <h1>Update event</h1>
+  <form">
+    <label for="updatename">Event id</label>
+    <input type="text" id="updateid" name="id">
+    <br>
+
+    <label for="updatename">Event name</label>
+    <input type="text" id="updatename" name="name">
+    <br>
+    
+    <label for="updateloc">Event location</label>
+    <input type="text" id="updateloc" name="location">
+    <br>
+    
+    <label for="updatequota">Event quota</label>
+    <input type="text" id="updatequota" name="quota">
+    <br>
+    
+    <button onClick="handleSubmit()">Submit</button>
+  </form>
+
+  <script>
+    const qs = document.querySelector.bind(document);
+    function handleSubmit() {
+      fetch(`http://localhost:3000/event/${qs('#updateid').value}`, {
+        method: 'put',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+          name: qs('#updatename').value,
+          location: qs('#updateloc').value,
+          quota: qs('#updatequota').value,
+        }),
+        mode: 'cors',
+      }).then((res) => res.json()).then((data) => console.log(data));
+    }
+  </script>
+</body>
+
+</html>

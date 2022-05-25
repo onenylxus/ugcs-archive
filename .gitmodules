@@ -4,3 +4,6 @@
 [submodule "csci3260/project"]
 	path = csci3260/project
 	url = https://github.com/panliu0310/csci3260_project
+[submodule "csci2720/project"]
+	path = csci2720/project
+	url = https://github.com/winkydes/csci2720-project.git
