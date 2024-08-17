@@ -1,4 +1,5 @@
-# Computer Science Archive
+# Undergraduate Computer Science Archive
+
 ## Contents
 | Course Code | Course Name |
 | --- | --- |
